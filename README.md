@@ -1,0 +1,1 @@
+Javascript generated restaurant page

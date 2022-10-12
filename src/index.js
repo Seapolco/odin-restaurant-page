@@ -2,6 +2,9 @@
 
 //first day of work no sleep day of coding, did one codewarz
 /// second day off, new job is a shock to the system. need sleeps.
+// Third day off. Desperate to keep coding but this new schedule 
+// has me completely out of whack. Going to try and get an early on so 
+// I can hopefully get a decent night of coding tomorrow.
 
 
 

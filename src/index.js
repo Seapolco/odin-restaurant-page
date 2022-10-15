@@ -11,7 +11,10 @@
 
 // homepage();
 
+let hi = require('./hi');
+
 console.log('Hungry?');
+// hi();
 
 
 const elementFactory = function(type, attributes, ...children) {

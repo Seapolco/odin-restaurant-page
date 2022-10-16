@@ -1,6 +1,7 @@
 import elementFactory from '../elementFactory';
 import clearPage from '../clearPage';
 import homePage from './home';
+import contactPage from './contact';
 
 
 
@@ -31,10 +32,10 @@ function menuPage() {
     ),              elementFactory('div', {class: 'card chicken-burger'},
                         elementFactory('h2', {class: "card-title"}, "Chicken Burger"),
                         elementFactory('p', {class: "card-price"}, "£8.99")
-    ),              elementFactory('div', {class: 'card beef-burger'},
+    ),              elementFactory('div', {class: 'card chicken-wings'},
                         elementFactory('h2', {class: "card-title"}, "Chicken Wings"),
                         elementFactory('p', {class: "card-price"}, "£6.99"),
-    ),              elementFactory('div', {class: 'card beef-burger'},
+    ),              elementFactory('div', {class: 'card fries'},
                         elementFactory('h2', {class: "card-title"}, "Fries"),
                         elementFactory('p', {class: "card-price"}, "£1.99")
     ),
@@ -71,6 +72,7 @@ function menuPage() {
         console.log(rootContainter)
         console.log('contact')
         clearPage();
+        contactPage();
     });
 
     

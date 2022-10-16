@@ -1,6 +1,7 @@
 import elementFactory from "../elementFactory";
 import clearPage from '../clearPage';
 import menuPage from './menu';
+import contactPage from "./contact";
 
 function homePage() {
 
@@ -56,6 +57,7 @@ contactLink.addEventListener('click', (e) => {
     console.log(rootContainter)
     console.log('contact')
     clearPage();
+    contactPage();
 });
 
 }

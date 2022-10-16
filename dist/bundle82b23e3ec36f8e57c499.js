@@ -2,6 +2,41 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/elementFactory.js":
+/*!*******************************!*\
+  !*** ./src/elementFactory.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function elementFactory(type, attributes) {
+  var el = document.createElement(type);
+  if (attributes) {
+    for (var key in attributes) {
+      el.setAttribute(key, attributes[key]);
+    }
+  }
+  for (var _len = arguments.length, children = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    children[_key - 2] = arguments[_key];
+  }
+  if (children) {
+    children.forEach(function (child) {
+      if (typeof child === 'string') {
+        el.appendChild(document.createTextNode(child));
+      } else {
+        el.appendChild(child);
+      }
+    });
+  }
+  return el;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (elementFactory);
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css":
 /*!*******************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css ***!
@@ -737,51 +772,26 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
-//import elementFactory from './elementFactory';
+/* harmony import */ var _elementFactory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elementFactory */ "./src/elementFactory.js");
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+
 
 //import papaya from './assets/papaya.png'; 
 
 console.log(123);
-function elementFactory(type, attributes) {
-  var el = document.createElement(type);
-  if (attributes) {
-    for (var key in attributes) {
-      console.log(key, attributes);
-      el.setAttribute(key, attributes[key]);
-    }
-  }
-  for (var _len = arguments.length, children = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-    children[_key - 2] = arguments[_key];
-  }
-  if (children) {
-    children.forEach(function (child) {
-      if (typeof child === 'string') {
-        el.appendChild(document.createTextNode(child));
-      } else {
-        el.appendChild(child);
-      }
-    });
-  }
-  return el;
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (elementFactory);
-var rootContainer = elementFactory('div', {
+var rootContainer = (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
   "class": 'root-container'
 });
-var navBar = elementFactory('div', {
+var navBar = (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
   "class": 'nav-bar'
-}, elementFactory('img', {
+}, (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('img', {
   "class": "nav-logo"
-}), elementFactory('ul', {
+}), (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('ul', {
   "class": 'nav-links'
-}, elementFactory('li', {}, 'Home'), elementFactory('li', {}, 'Menu'), elementFactory('li', {}, 'Contact')));
-var mainContent = elementFactory('div', {
+}, (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('li', {}, 'Home'), (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('li', {}, 'Menu'), (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('li', {}, 'Contact')));
+var mainContent = (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
   "class": 'main-content'
-}, elementFactory('div', {
+}, (0,_elementFactory__WEBPACK_IMPORTED_MODULE_0__["default"])('div', {
   "class": 'hungry'
 }, 'Hungry?'));
 document.body.appendChild(rootContainer);
@@ -791,4 +801,4 @@ rootContainer.appendChild(mainContent);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle88775f5994694172bd3e.js.map
+//# sourceMappingURL=bundle82b23e3ec36f8e57c499.js.map

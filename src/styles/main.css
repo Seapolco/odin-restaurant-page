@@ -54,6 +54,10 @@ body {
     gap: 2rem; 
 }
 
+.home, .menu, .contact {
+    cursor: pointer;
+}
+
 .main-content {
    display: grid;
    place-items: center;
@@ -63,6 +67,62 @@ body {
    background-size:cover;
 
 }
+
+.menu-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 40px;
+    gap: 30px;
+}
+
+.card {
+    background-color: antiquewhite;
+    border: burlywood solid 5px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 10px 10px 5px black;
+    padding: 10px;
+    color: red;
+    -webkit-text-stroke: .5px yellow;
+    font-size: 1.5rem;
+    text-shadow: 3px 3px 1.5px green;
+}
+
+.beef-burger {
+    background-image: url('../assets/menu-images/beef-burger.jpeg');
+    background-position: center;
+    background-size:cover;
+
+}
+
+.chicken-burger {
+    background-image: url('../assets/menu-images/chicken-burger.jpeg');
+    background-position: center;
+    background-size:cover;
+
+}
+.chicken-wings {
+    background-image: url('../assets/menu-images/chicken-wings.jpeg');
+    background-position: center;
+    background-size:cover;
+
+}
+.fries {
+    background-image: url('../assets/menu-images/fries.webp');
+    background-position: center;
+    background-size:cover;
+
+}
+
+
+
+/* .bb-image {
+    width: auto;
+    height: 5rem;
+    content:url('../assets/menu-images/beef-burger.jpeg');
+
+} */
 
 .hungry {
     font-size: 6rem;
